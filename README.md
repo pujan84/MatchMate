@@ -21,10 +21,6 @@ MatchMate is a simple Android app that fetches and displays user profiles from t
 ### Building and Running
 The project uses **AGP 9.3.1** and requires **JDK 17**.
 
-Because of some changes in how the newer Android Gradle Plugin handles Kotlin, make sure your `gradle.properties` includes these flags if you run into build errors:
-```properties
-android.builtInKotlin=false
-android.newDsl=false
 ```
 
 1. Open in Android Studio.
