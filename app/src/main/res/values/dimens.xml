@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- General -->
+    <dimen name="zero_dp">0dp</dimen>
+    <dimen name="spacing_standard">16dp</dimen>
+
+    <!-- Main Screen -->
+    <dimen name="appbar_elevation">4dp</dimen>
+    <dimen name="recycler_padding_bottom">16dp</dimen>
+    <dimen name="error_layout_padding">32dp</dimen>
+    <dimen name="error_icon_size">64dp</dimen>
+    <dimen name="error_text_size">16sp</dimen>
+    <dimen name="error_text_margin_top">16dp</dimen>
+    <dimen name="retry_button_margin_top">16dp</dimen>
+
+    <!-- Match Item Card -->
+    <dimen name="card_margin_horizontal">16dp</dimen>
+    <dimen name="card_margin_vertical">8dp</dimen>
+    <dimen name="card_corner_radius">16dp</dimen>
+    <dimen name="card_elevation">2dp</dimen>
+    <dimen name="card_stroke_width">0dp</dimen>
+
+    <dimen name="profile_image_height">280dp</dimen>
+    <dimen name="gradient_overlay_height">80dp</dimen>
+
+    <dimen name="name_margin_start">16dp</dimen>
+    <dimen name="name_margin_bottom">16dp</dimen>
+    <dimen name="name_text_size">22sp</dimen>
+
+    <dimen name="content_padding">16dp</dimen>
+    <dimen name="info_text_size">14sp</dimen>
+    <dimen name="icon_text_padding">8dp</dimen>
+    <dimen name="phone_margin_top">4dp</dimen>
+
+    <dimen name="status_margin_top">12dp</dimen>
+    <dimen name="status_text_size">16sp</dimen>
+
+    <dimen name="button_layout_margin_top">16dp</dimen>
+    <dimen name="action_button_height">56dp</dimen>
+    <dimen name="button_corner_radius">28dp</dimen>
+    <dimen name="button_spacing">16dp</dimen>
+</resources>

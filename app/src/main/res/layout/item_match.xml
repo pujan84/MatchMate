@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/card_margin_horizontal"
+    android:layout_marginVertical="@dimen/card_margin_vertical"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/card_elevation"
+    app:strokeWidth="@dimen/card_stroke_width"
+    app:cardBackgroundColor="@color/surface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_image_height">
+
+            <ImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/gradient_overlay_height"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/gradient_bottom" />
+
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="@dimen/name_margin_start"
+                android:layout_marginBottom="@dimen/name_margin_bottom"
+                android:textColor="@color/white"
+                android:textSize="@dimen/name_text_size"
+                android:textStyle="bold"
+                tools:text="John Doe, 25" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/content_padding">
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/icon_text_padding"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/info_text_size"
+                app:drawableStartCompat="@drawable/ic_location"
+                app:drawableTint="@color/text_secondary"
+                tools:text="San Francisco, CA" />
+
+            <TextView
+                android:id="@+id/txtPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/phone_margin_top"
+                android:drawablePadding="@dimen/icon_text_padding"
+                android:textColor="@color/text_secondary"
+                android:textSize="@dimen/info_text_size"
+                app:drawableStartCompat="@drawable/ic_call"
+                app:drawableTint="@color/text_secondary"
+                tools:text="+1 234 567 890" />
+
+            <TextView
+                android:id="@+id/txtStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/status_margin_top"
+                android:gravity="center"
+                android:textSize="@dimen/status_text_size"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:text="Member Accepted"
+                tools:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/buttonLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/button_layout_margin_top"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDecline"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="@dimen/action_button_height"
+                    android:layout_weight="1"
+                    android:text="Decline"
+                    android:textColor="@color/decline"
+                    app:cornerRadius="@dimen/button_corner_radius"
+                    app:strokeColor="@color/decline" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAccept"
+                    android:layout_width="@dimen/zero_dp"
+                    android:layout_height="@dimen/action_button_height"
+                    android:layout_weight="1"
+                    android:layout_marginStart="@dimen/button_spacing"
+                    android:text="Accept"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/accept"
+                    app:cornerRadius="@dimen/button_corner_radius" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

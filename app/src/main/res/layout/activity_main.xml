@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/surface">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="MatchMate"
+            app:titleTextColor="@color/primary"
+            app:titleCentered="true"
+            android:elevation="@dimen/appbar_elevation"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/recycler_padding_bottom"
+        android:layoutAnimation="@anim/layout_animation"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/item_match"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminateTint="@color/primary"/>
+
+    <LinearLayout
+        android:id="@+id/errorLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/error_layout_padding"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/error_icon_size"
+            android:layout_height="@dimen/error_icon_size"
+            android:src="@android:drawable/stat_notify_error"
+            app:tint="@color/text_secondary"/>
+
+        <TextView
+            android:id="@+id/txtError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/error_text_margin_top"
+            android:text="Something went wrong"
+            android:textAlignment="center"
+            android:textColor="@color/text_secondary"
+            android:textSize="@dimen/error_text_size"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRetry"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/retry_button_margin_top"
+            android:text="Retry"
+            android:textColor="@color/primary"/>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
