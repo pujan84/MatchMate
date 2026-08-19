@@ -52,5 +52,7 @@ class MatchRepository(
         dao.updateStatus(id, "DECLINED")
     }
 
+    suspend fun getDatabaseCount() = dao.getCount()
+
     suspend fun isDatabaseEmpty() = dao.getCount() == 0
 }

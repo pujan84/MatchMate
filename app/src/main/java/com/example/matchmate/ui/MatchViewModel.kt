@@ -17,7 +17,7 @@ class MatchViewModel(application: Application) : AndroidViewModel(application) {
     private val _state = MutableLiveData<NetworkState>()
     val state: LiveData<NetworkState> = _state
 
-    private var currentPage = 1
+    private var currentPage = 0
     private var isLoading = false
 
     init {
@@ -35,17 +35,19 @@ class MatchViewModel(application: Application) : AndroidViewModel(application) {
 
     private fun loadInitialData() {
         viewModelScope.launch {
-            if (repository.isDatabaseEmpty()) {
+            val count = repository.getDatabaseCount()
+            if (count == 0) {
                 fetchPage(1)
+            } else {
+                // Set currentPage based on records in DB (10 per page)
+                currentPage = count / 10
             }
         }
     }
 
     fun loadNextPage() {
         if (isLoading) return
-        isLoading = true
-        currentPage++
-        fetchPage(currentPage)
+        fetchPage(currentPage + 1)
     }
 
     private fun fetchPage(page: Int) {
@@ -57,6 +59,7 @@ class MatchViewModel(application: Application) : AndroidViewModel(application) {
 
             if (result.isSuccess) {
                 _state.value = NetworkState.Success
+                currentPage = page
             } else {
                 val exception = result.exceptionOrNull()
                 val message = if (exception is java.io.IOException || 
@@ -78,7 +81,7 @@ class MatchViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
     fun retry() {
-        fetchPage(currentPage)
+        fetchPage(currentPage + 1)
     }
 
     fun decline(id: String) {
