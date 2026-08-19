@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Adjust card height for landscape grid -->
-    <dimen name="profile_image_height">200dp</dimen>
-    <dimen name="card_margin_horizontal">8dp</dimen>
-    <dimen name="card_margin_vertical">8dp</dimen>
+    <!-- Balanced compact values for landscape -->
+    <dimen name="profile_image_height">160dp</dimen>
+    <dimen name="gradient_overlay_height">60dp</dimen>
 
-    <!-- Reduce padding a bit for grid items -->
-    <dimen name="content_padding">12dp</dimen>
-    <dimen name="name_text_size">18sp</dimen>
+    <dimen name="card_margin_horizontal">8dp</dimen>
+    <dimen name="card_margin_vertical">4dp</dimen>
+
+    <dimen name="name_margin_start">12dp</dimen>
+    <dimen name="name_margin_bottom">12dp</dimen>
+    <dimen name="name_text_size">16sp</dimen>
+
+    <dimen name="content_padding">8dp</dimen>
     <dimen name="info_text_size">12sp</dimen>
-    <dimen name="action_button_height">48dp</dimen>
+    <dimen name="icon_text_padding">4dp</dimen>
+    <dimen name="phone_margin_top">2dp</dimen>
+
+    <dimen name="status_margin_top">8dp</dimen>
+    <dimen name="button_layout_margin_top">8dp</dimen>
+    <dimen name="action_button_height">40dp</dimen>
 </resources>
