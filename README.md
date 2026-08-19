@@ -21,8 +21,6 @@ MatchMate is a simple Android app that fetches and displays user profiles from t
 ### Building and Running
 The project uses **AGP 9.3.1** and requires **JDK 17**.
 
-```
-
 1. Open in Android Studio.
 2. Let Gradle sync.
 3. Build the project and generate APK
