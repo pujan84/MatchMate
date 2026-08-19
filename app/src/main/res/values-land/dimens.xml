@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Adjust card height for landscape grid -->
+    <dimen name="profile_image_height">200dp</dimen>
+    <dimen name="card_margin_horizontal">8dp</dimen>
+    <dimen name="card_margin_vertical">8dp</dimen>
+
+    <!-- Reduce padding a bit for grid items -->
+    <dimen name="content_padding">12dp</dimen>
+    <dimen name="name_text_size">18sp</dimen>
+    <dimen name="info_text_size">12sp</dimen>
+    <dimen name="action_button_height">48dp</dimen>
+</resources>

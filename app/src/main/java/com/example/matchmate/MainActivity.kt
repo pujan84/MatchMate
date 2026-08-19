@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.matchmate.data.remote.NetworkState
@@ -30,7 +31,8 @@ class MainActivity : AppCompatActivity() {
             onDecline = { viewModel.decline(it) }
         )
 
-        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        val spanCount = resources.getInteger(R.integer.grid_span_count)
+        binding.recyclerView.layoutManager = GridLayoutManager(this, spanCount)
         binding.recyclerView.adapter = adapter
 
         viewModel.matches.observe(this) {
